@@ -6,7 +6,7 @@
 		<div class="header-input">
 			<span class="iconfont">&#xe632;</span>
 			输入城市/景点/
-	  	</div>
+		</div>
 		<div class="header-right">
 			城市
 			<span class="iconfont arrow-icon">&#xe64a;</span>
@@ -15,14 +15,14 @@
 </template>
 
 <script>
-	export default {
-		name: 'HomeHeader'
-	}
+export default {
+  name: 'HomeHeader'
+}
 </script>
 
 <style lang="stylus" scoped>
 	.header
-		@import '~styles/varibles.styl' 
+		@import '~styles/varibles.styl'
 		display: flex
 		line-height: .86rem
 		background: $bgColor
@@ -46,7 +46,7 @@
 		.header-right
 			width: 1.24rem
 			float: right
-			text-align: center	
+			text-align: center
 			.arrow-icon
 				margin-left: -.04rem
 				font-size: .2rem
