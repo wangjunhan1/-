@@ -6,7 +6,7 @@
 </template>
 
 <script>
-import HomeHeader from './components/Header'
+import HomeHeader from './components/header'
 import HomeSwiper from './components/swiper'
 export default {
   name: 'Home',
