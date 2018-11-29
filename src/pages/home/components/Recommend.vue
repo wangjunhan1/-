@@ -2,7 +2,7 @@
 	<div>
 		<div class="recommend-title">热销推荐</div>
 		<ul>
-			<li class="item border-bottom" v-for="item of recommendList" :key="item.id">
+			<li class="item border-bottom" v-for="item of list" :key="item.id">
 				<img class="item-img" :src="item.imgUrl"/>
 				<div class="item-info">
 					<p class="item-title">{{item.title}}</p>
@@ -16,7 +16,10 @@
 
 <script>
 export default {
-	name: 'HomeRecommend',
+  name: 'HomeRecommend',
+  props: {
+    list: Array
+  },
   data () {
     return {
       recommendList: [{
@@ -40,8 +43,8 @@ export default {
         title: '印象西湖',
         content: '帅的人都去过了😎，你还等什么~'
       }]
-     }
     }
+  }
 }
 </script>
 
@@ -55,31 +58,31 @@ export default {
    overflow: hidden
    display: flex
    height: 1.9rem
-  	.item-img
-  	 width: 1.7rem
-  	 height: 1.7rem
-  	 padding: .1rem
-  	.item-info
-      flex: 1
-      padding: .1rem
-      min-width: 0      
-  		.item-title
-        line-height: .54rem
-        font-size: .32rem
-        ellipsis()          
-  		.item-content
-        line-height: .5rem
-        color: #ccc
-        ellipsis()   
-  		.item-button  
-        background: #ff9300
-        padding: 0 .1rem
-        border-radius: .06rem
-        margin-top: .16rem
-        color: #fff
-        line-height: .44rem
-        width: 77px
-        height: 20px
-        font-size: .25rem
-        font-weight: bold
+   .item-img
+    width: 1.7rem
+    height: 1.7rem
+    padding: .1rem
+   .item-info
+    flex: 1
+    padding: .1rem
+    min-width: 0      
+    .item-title
+     line-height: .54rem
+     font-size: .32rem
+     ellipsis()          
+    .item-content
+     line-height: .5rem
+     color: #ccc
+     ellipsis()   
+    .item-button  
+     background: #ff9300
+     padding: 0 .1rem
+     border-radius: .06rem
+     margin-top: .16rem
+     color: #fff
+     line-height: .44rem
+     width: 77px
+     height: 20px
+     font-size: .25rem
+     font-weight: bold
 </style>
