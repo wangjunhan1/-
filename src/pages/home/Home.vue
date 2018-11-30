@@ -54,20 +54,6 @@ export default {
     }
   }
 }
-    //getHomeInfo () {
-      //axios.get('/api/index.json')
-        //.then(this.getHomeInfoSucc)
-    //},
-    //getHomeInfoSucc (res) {
-      //res = res.data
-      //if (res.ret && res.data) {
-        //this.city = res.data.city
-      //}
-    //},
-    //created: function () {
-    //this.getHomeInfo()
-    //alert("Hello World")
-    //}
 </script>
 <style>
 </style>
