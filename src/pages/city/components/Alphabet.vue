@@ -1,25 +1,59 @@
 <template>
   <ul class="list">
-    <li class="item">A</li>
-    <li class="item">B</li>
-    <li class="item">C</li>
-    <li class="item">D</li>
-    <li class="item">E</li>
-    <li class="item">F</li>
-    <li class="item">G</li>
-    <li class="item">H</li>
-    <li class="item">J</li>
-    <li class="item">K</li>
-    <li class="item">L</li>
-    <li class="item">M</li>
-    <li class="item">N</li>
-    <li class="item">O</li>
+    <li class="item" v-for="item of letters" :key="item" :ref="item" @click="handleLetterClick" @touchstart="handleTouchStart" @touchmove="handleTouchMove" @touchend="handleTouchEnd">{{item}}</li>
   </ul>
 </template>
 
 <script>
 export default {
-    name: 'CityAlphabet'
+    name: 'CityAlphabet',
+    props: {
+      cities: Object
+    },
+    computed: {
+      letters () {
+        const letters =[]
+        for (let i in this.cities) {
+          letters.push(i)
+        }
+        return letters
+      }
+    },
+    data () {
+      return {
+        touchStatus: false,
+        startY: 0,
+        timer: null
+      }
+    },
+    updated () {
+      this.startY = this.$refs['A'][0].offsetTop
+    },
+    methods: {
+      handleLetterClick (e) {
+        this.$emit('change',e.target.innerText)
+      },
+      handleTouchStart () {
+        this.touchStatus = true
+      },
+      handleTouchMove (e) {
+        if (this.touchStatus) {
+          if (this.timer) {
+            clearTimeout(this.timer)
+          }
+          this.timer = setTimeout(() => {
+            const touchY = e.touches[0].clientY - 79
+            const index = Math.floor((touchY - this.startY) / 20)
+            if (index >= 0 && index < this.letters.length) {
+              this.$emit('change', this.letters[index])
+            }
+          }, 16)
+        }
+      },
+      handleTouchEnd () {
+        this.touchStatus = false
+      }
+    }
 }
 </script>
 
