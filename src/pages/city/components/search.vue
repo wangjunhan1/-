@@ -5,7 +5,7 @@
     </div>
     <div class="search-content" ref="search" v-show="keyword">
       <ul>
-        <li class="search-item border-bottom" v-for="item of list" :key="item.id">{{item.name}}</li>
+        <li class="search-item border-bottom" v-for="item of list" :key="item.id" @click="handleClick(item.name)">{{item.name}}</li>
         <li class="search-item border-bottom" v-show="hasNoData">没有匹配的城市</li>
       </ul>
     </div>
@@ -24,6 +24,12 @@ export default {
         keyword: '',
         list: [],
         timer: null
+      }
+    },
+    methods: {
+      handleClick (city) {
+      this.$store.commit('changeCity', city)
+      this.$router.push('/')
       }
     },
     computed: {
@@ -65,6 +71,7 @@ export default {
     line-height: .72rem
     padding: 0 .1rem
     background: $bgColor
+    touch-action: none
     .search-input
       box-sizing: border-box
       margin-top: -1.5px
@@ -84,6 +91,7 @@ export default {
     right: 0
     bottom: 0
     background: #eee
+    touch-action: none
     .search-item
       line-height: .62rem
       padding-left: .2rem
