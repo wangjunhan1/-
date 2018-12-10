@@ -1,13 +1,13 @@
 <template>
    <div>
-       <div class="banner">
+       <div class="banner" @click="handleBannerClick">
            <img class="banner-img"src="//img1.qunarzz.com/sight/p0/201309/25/70edd368471094bdc8d65eac.jpg_600x330_82e4e08f.jpg" />
            <div class="banner-info">
-               <div class="banner-number"><span class="banner-number-span">&#xe7b3;</span>8</div>
+               <div class="banner-number">&#xe7b3;8</div>
                <div class="banner-title">临安湍口众安氡温泉</div>
            </div>
        </div> 
-       <common-gallary></common-gallary>
+       <common-gallary :imgs="imgs" v-show="showGallary" @close="handleGallayClose"></common-gallary>
    </div>
 </template>
 
@@ -15,6 +15,20 @@
 import CommonGallary from 'common/gallary/gallary'
 export default {
     name: 'DetailBanner',
+    data () {
+        return {
+            showGallary: false,
+            imgs: ['//img1.qunarzz.com/sight/p0/1705/ed/ed3fe7a5e8616aeda3.img.jpg_r_800x800_22a5e5cd.jpg', '//img1.qunarzz.com/sight/p0/1705/ed/ed3fe7a5e8616aeda3.img.jpg_r_800x800_22a5e5cd.jpg', '//img1.qunarzz.com/sight/p0/1705/ed/ed3fe7a5e8616aeda3.img.jpg_r_800x800_22a5e5cd.jpg']
+        }
+    },
+    methods: {
+        handleBannerClick () {
+            this.showGallary = true
+        },
+        handleGallayClose () {
+            this.showGallary = false
+        }
+    },
     components: {
         CommonGallary: CommonGallary
     }
@@ -48,6 +62,7 @@ export default {
         background: rgba(0, 0, 0, .8)
         font-size: .24rem
         margin-left: .2rem
+        font-family: "iconfont" !important
       .banner-title
         flex: 1
         font-size: .35rem

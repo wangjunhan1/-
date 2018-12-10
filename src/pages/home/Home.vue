@@ -1,10 +1,11 @@
 <template>
 	<div>
-		<home-header ></home-header>
+		<home-header></home-header>
 		<home-swiper :list="swiperList"></home-swiper>
 		<home-icons :list="iconList"></home-icons>
     <home-recommend :list="recommendList"></home-recommend>
     <home-weekend :list="weekendList"></home-weekend>
+    <!--<test-swiper></test-swiper>-->
 	</div>
 </template>
 
@@ -14,6 +15,7 @@ import HomeSwiper from './components/swiper.vue'
 import HomeIcons from './components/icons.vue'
 import HomeRecommend from './components/recommend.vue'
 import HomeWeekend from './components/weekend.vue'
+import TestSwiper from './components/test.vue'
 import axios from 'axios'
 export default {
   name: 'Home',
@@ -22,7 +24,8 @@ export default {
     HomeSwiper: HomeSwiper,
     HomeIcons: HomeIcons,
     HomeRecommend: HomeRecommend,
-    HomeWeekend: HomeWeekend
+    HomeWeekend: HomeWeekend,
+    TestSwiper: TestSwiper
   },
   data () {
     return {
