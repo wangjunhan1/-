@@ -15,10 +15,14 @@ Vue.config.productionTip = false
 fastClick.attach(document.body)
 Vue.use(VueAwesomeSwiper)
 
-new Vue({
+let vm = new Vue({
   el: '#app',
   router,
   store: store,
   components: { App },
   template: '<App/>'
+})
+
+Vue.use({
+  vm
 })

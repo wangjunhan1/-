@@ -4,7 +4,7 @@
 		<ul>
 			<li class="item border-bottom" v-for="item of list" :key="item.id">
         <div class="item-img-wrapper">
-				  <img class="item-img" :src="item.imgUrl"/>
+          <img class="item-img" :src="item.imgUrl"/>
         </div>
 				<div class="item-info">
 					<p class="item-title">{{item.title}}</p>
@@ -17,7 +17,7 @@
 
 <script>
 export default {
-	name: 'HomeWeekend',
+  name: 'HomeWeekend',
   props: {
     list: Array
   },
@@ -44,8 +44,8 @@ export default {
         title: '美丽普陀山',
         content: '细数温州那些美到陶醉的赏秋地'
       }]
-     }
     }
+  }
 }
 </script>
 

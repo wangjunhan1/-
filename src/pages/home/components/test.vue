@@ -20,15 +20,15 @@
 
 <script>
 export default {
-    name: 'TestSwiper',
-    data: function () {
-      return {
-        swiperOption: {
-          pagination: '.swiper-pagination',
-          paginationType: 'fraction'
-        }
+  name: 'TestSwiper',
+  data: function () {
+    return {
+      swiperOption: {
+        pagination: '.swiper-pagination',
+        paginationType: 'fraction'
       }
     }
+  }
 }
 </script>
 

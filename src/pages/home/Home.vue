@@ -36,7 +36,7 @@ export default {
     }
   },
   mounted: function () {
-    this.getHomeInfo();
+    this.getHomeInfo()
   },
   methods: {
     getHomeInfo: function () {
@@ -45,7 +45,7 @@ export default {
     },
     getHomeInfoSucc (res) {
       res = res.data
-      if(res.ret && res.data) {
+      if (res.ret && res.data) {
         const data = res.data
         this.swiperList = data.swiperList
         this.iconList = data.iconList

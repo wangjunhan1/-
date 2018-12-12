@@ -34,18 +34,18 @@ export default {
       padding-bottom: 25%
       overflow: hidden
       .icon-img
-      	position: absolute
-      	top: 0
-      	left: 0
-      	right: 0
-      	bottom: .44rem
-       box-sizing: border 
-       padding: .1rem 
-      	.icon-img-content
-         display: block
-         height: 100%
-         width: 76.53%
-         margin: 0 auto
+        position: absolute
+        top: 0
+        left: 0
+        right: 0
+        bottom: .44rem
+        box-sizing: border
+        padding: .1rem
+        .icon-img-content
+          display: block
+          height: 100%
+          width: 76.53%
+          margin: 0 auto
       .icon-content
         position: absolute
         left: 0

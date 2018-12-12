@@ -31,18 +31,18 @@ export default {
   },
   methods: {
     handleScroll () {
-     const top = document.documentElement.scrollTop
-     if (top > 60) {
-      let opacity = top / 140
-      opacity = opacity > 1 ? 1 : opacity
-      this.opacityStyle = { opacity }
-      this.showAbs = false
-     } else {
-       this.showAbs = true
-     }
+      const top = document.documentElement.scrollTop
+      if (top > 60) {
+        let opacity = top / 140
+        opacity = opacity > 1 ? 1 : opacity
+        this.opacityStyle = { opacity }
+        this.showAbs = false
+      } else {
+        this.showAbs = true
+      }
     }
   }
-}   
+}
 </script>
 
 <style lang="stylus" scoped>

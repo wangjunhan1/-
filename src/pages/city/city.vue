@@ -14,43 +14,42 @@ import CitySearch from './components/search'
 import CityList from './components/list'
 import CityAlphabet from './components/Alphabet'
 export default {
-    name: 'City',
-    components: {
-        CityHeader: CityHeader,
-        CitySearch: CitySearch,
-        CityList: CityList,
-        CityAlphabet: CityAlphabet
-    },
-    data () {
-        return {
-            cities: {},
-            hotCities: [],
-            letter: ''
-        }
-    },
-    mounted () {
-        this.getCityInfo();
-    },
-    methods: {
-        getCityInfo () {
-            axios.get('/api/city.json')
-              .then(this.handleGetCityInfoSucc)
-        },
-        handleGetCityInfoSucc (res) {
-            res = res.data
-            if (res.ret && res.data) {
-                const data = res.data
-                this.cities = data.cities
-                this.hotCities = data.hotCities
-            }
-        },
-        handleLetterChange (letter) {
-            this.letter = letter
-        }
+  name: 'City',
+  components: {
+    CityHeader: CityHeader,
+    CitySearch: CitySearch,
+    CityList: CityList,
+    CityAlphabet: CityAlphabet
+  },
+  data () {
+    return {
+      cities: {},
+      hotCities: [],
+      letter: ''
     }
+  },
+  mounted () {
+    this.getCityInfo()
+  },
+  methods: {
+    getCityInfo () {
+      axios.get('/api/city.json')
+        .then(this.handleGetCityInfoSucc)
+    },
+    handleGetCityInfoSucc (res) {
+      res = res.data
+      if (res.ret && res.data) {
+        const data = res.data
+        this.cities = data.cities
+        this.hotCities = data.hotCities
+      }
+    },
+    handleLetterChange (letter) {
+      this.letter = letter
+    }
+  }
 }
 </script>
 
 <style  lang="stylus" scoped>
-    
 </style>

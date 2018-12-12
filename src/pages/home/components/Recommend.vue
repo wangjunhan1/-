@@ -65,16 +65,16 @@ export default {
    .item-info
     flex: 1
     padding: .1rem
-    min-width: 0      
+    min-width: 0
     .item-title
      line-height: .54rem
      font-size: .32rem
-     ellipsis()          
+     ellipsis()
     .item-content
      line-height: .5rem
      color: #ccc
-     ellipsis()   
-    .item-button  
+     ellipsis()
+    .item-button
      background: #ff9300
      padding: 0 .1rem
      border-radius: .06rem

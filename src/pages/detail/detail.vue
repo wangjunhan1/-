@@ -3,20 +3,19 @@
        <detail-banner></detail-banner>
        <detail-header></detail-header>
        <div class="test">123</div>
-   </div> 
+   </div>
 </template>
 
 <script>
 import DetailBanner from './components/banner'
 import DetailHeader from './components/header'
 export default {
-    name: 'Detail',
-    components: {
-        DetailBanner: DetailBanner,
-        DetailHeader: DetailHeader
-    }
+  name: 'Detail',
+  components: {
+    DetailBanner: DetailBanner,
+    DetailHeader: DetailHeader
+  }
 }
-    
 </script>
 
 <style lang="stylus" scoped>

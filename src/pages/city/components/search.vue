@@ -15,53 +15,53 @@
 <script>
 import Bscroll from 'better-scroll'
 export default {
-    name: 'CitySearch',
-    props: {
-      cities: Object
-    },
-    data () {
-      return {
-        keyword: '',
-        list: [],
-        timer: null
-      }
-    },
-    methods: {
-      handleClick (city) {
+  name: 'CitySearch',
+  props: {
+    cities: Object
+  },
+  data () {
+    return {
+      keyword: '',
+      list: [],
+      timer: null
+    }
+  },
+  methods: {
+    handleClick (city) {
       this.$store.commit('changeCity', city)
       this.$router.push('/')
-      }
-    },
-    computed: {
-      hasNoData () {
-        return !this.list.length
-      }
-    },
-    watch: {
-      keyword () {
-        if (this.timer) {
-          clearTimeout(this.timer)
-        }
-        if (!this.keyword) {
-          this.list = []
-          return
-        }
-        this.timer = setTimeout(() => {
-          const result = []
-          for(let i in this.cities) {
-            this.cities[i].forEach((value) => {
-              if (value.name.indexOf(this.keyword) > -1 || value.spell.indexOf(this.keyword) > -1) {
-                result.push(value)
-              }
-            })
-          this.list = result
-          }
-        }, 100)
-      }
-    },
-    mounted () {
-      this.scroll = new Bscroll(this.$refs.search)
     }
+  },
+  computed: {
+    hasNoData () {
+      return !this.list.length
+    }
+  },
+  watch: {
+    keyword () {
+      if (this.timer) {
+        clearTimeout(this.timer)
+      }
+      if (!this.keyword) {
+        this.list = []
+        return
+      }
+      this.timer = setTimeout(() => {
+        const result = []
+        for (let i in this.cities) {
+          this.cities[i].forEach((value) => {
+            if (value.name.indexOf(this.keyword) > -1 || value.spell.indexOf(this.keyword) > -1) {
+              result.push(value)
+            }
+          })
+          this.list = result
+        }
+      }, 100)
+    }
+  },
+  mounted () {
+    this.scroll = new Bscroll(this.$refs.search)
+  }
 }
 </script>
 
