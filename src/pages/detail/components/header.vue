@@ -62,6 +62,7 @@ export default {
       font-size: .3rem
       font-family: "iconfont" !important
   .header-fixed
+    z-index: 2
     position: fixed
     top: 0
     left: 0
