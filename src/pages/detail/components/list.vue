@@ -5,8 +5,8 @@
         <span class="item-title-icon"></span>
         {{item.title}}
       </div>
-      <div v-if="item.title2" class="item-title2">
-        <detail-list :list="item.title2"></detail-list>
+      <div v-if="item.children" class="item-title2">
+        <detail-list :list="item.children"></detail-list>
       </div>
     </div>
   </div>
