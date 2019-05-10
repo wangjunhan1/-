@@ -19,7 +19,7 @@ export default {
     overflow: hidden
     background: $bgColor
     font-size: .32rem
-    color: #fff
+    color: black
     line-height: $headerHeight
     .back-icon
       float: left
@@ -27,7 +27,7 @@ export default {
       text-align: center
       font-size: .32rem
       font-weight: bold
-      color: #fff
+      color: black
     .header-title
       text-align: center
       margin: 0 1rem

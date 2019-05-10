@@ -1,15 +1,15 @@
 <template>
 	<div>
-		<div class="recommend-title">热销推荐</div>
+		<div class="recommend-title"></div>
 		<ul>
-			<router-link tag="li" class="item border-bottom" v-for="item of list" :key="item.id" :to="'/detail/' + item.id">
+			<li class="item border-bottom" v-for="item of list">
 				<img class="item-img" :src="item.imgUrl"/>
 				<div class="item-info">
 					<p class="item-title">{{item.title}}</p>
 					<p class="item-content">{{item.content}}</p>
-					<button class="item-button">查看详情</button>
+					<a class="item-button" href="https://m.yidianling.com/ceshi/1760">查看详情</a>
 				</div>
-			</router-link>
+			</li>
 		</ul>
 	</div>
 </template>
@@ -51,15 +51,19 @@ export default {
 <style lang="stylus" scoped>
   @import '~styles/mixins.styl'
   .recommend-title
+   height: .5rem
    margin-top: 0.2rem
    line-height: .8rem
    text-indent: .2rem
+   font-size: .3rem
+   background: #d0d0d0
+   font-weight: bold
   .item
    overflow: hidden
    display: flex
    height: 1.9rem
    .item-img
-    width: 1.7rem
+    width: 1.9rem
     height: 1.7rem
     padding: .1rem
    .item-info
@@ -75,14 +79,14 @@ export default {
      color: #ccc
      ellipsis()
     .item-button
-     background: #ff9300
+     background: #46A3FF
      padding: 0 .1rem
      border-radius: .06rem
-     margin-top: .16rem
+     margin-top: .2rem
      color: #fff
      line-height: .44rem
      width: 77px
-     height: 20px
+     height: 30px
      font-size: .25rem
      font-weight: bold
 </style>

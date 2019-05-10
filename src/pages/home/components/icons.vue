@@ -1,11 +1,11 @@
 <template>
 	<div class="icons">
-		<div class="icon" v-for="item of list" :key="item.id">
+		<router-link tag="div" class="icon" v-for="item of list" :key="item.id" :to="'/detail/components/' + item.id">
 			<div class="icon-img">
 				<img class='icon-img-content' :src='item.imgUrl'/>
 			</div>
 			<p class="icon-content">{{item.content}}</p>
-		</div>
+		</router-link>
 	</div>
 </template>
 
@@ -24,8 +24,8 @@ export default {
   .icons
     overflow: hidden
     height: 0
-    padding-bottom: 50%
-    margin-top: .2rem
+    padding-bottom: 25%
+    margin-top: .6rem
     .icon
       position: relative
       float: left

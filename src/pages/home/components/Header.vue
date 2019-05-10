@@ -4,8 +4,7 @@
 			<div class="iconfont back-icon">&#xe624;</div>
 		</div>
 		<div class="header-input">
-			<span class="iconfont">&#xe632;</span>
-			输入城市/景点/
+			健康办公每一天
 		</div>
 		<router-link to='/city'>
 			<div class="header-right">
@@ -28,7 +27,7 @@ export default {
 		display: flex
 		line-height: $headerHeight
 		background: $bgColor
-		color: #fff
+		color: black
 		.header-left
 			width: .64rem
 			float: left
@@ -44,12 +43,13 @@ export default {
 			padding-left: .2rem
 			background: #fff
 			border-radius: .1rem
-			color: #ccc
+			color: black
+			text-align: center
 		.header-right
 			width: 1.24rem
 			float: right
 			text-align: center
-			color: #fff
+			color: black
 			.arrow-icon
 				margin-left: -.04rem
 				font-size: .2rem

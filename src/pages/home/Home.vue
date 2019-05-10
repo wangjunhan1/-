@@ -1,10 +1,10 @@
 <template>
 	<div>
 		<home-header></home-header>
-		<home-swiper :list="swiperList"></home-swiper>
+    <home-progress></home-progress>
 		<home-icons :list="iconList"></home-icons>
     <home-recommend :list="recommendList"></home-recommend>
-    <home-weekend :list="weekendList"></home-weekend>
+    <div class="und"></div>
     <!--<test-swiper></test-swiper>-->
 	</div>
 </template>
@@ -16,6 +16,7 @@ import HomeIcons from './components/icons.vue'
 import HomeRecommend from './components/recommend.vue'
 import HomeWeekend from './components/weekend.vue'
 import TestSwiper from './components/test.vue'
+import HomeProgress from './components/progress.vue'
 import axios from 'axios'
 export default {
   name: 'Home',
@@ -25,7 +26,8 @@ export default {
     HomeIcons: HomeIcons,
     HomeRecommend: HomeRecommend,
     HomeWeekend: HomeWeekend,
-    TestSwiper: TestSwiper
+    TestSwiper: TestSwiper,
+    HomeProgress: HomeProgress
   },
   data () {
     return {
@@ -56,5 +58,7 @@ export default {
   }
 }
 </script>
-<style>
+<style lang="stylus" scoped>
+  .und
+    height: 1rem
 </style>

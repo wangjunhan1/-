@@ -2,7 +2,10 @@ import Vue from 'vue'
 import Router from 'vue-router'
 import Home from '@/pages/home/Home'
 import City from '@/pages/city/city'
-import Detail from '@/pages/detail/detail'
+import First from '@/pages/detail/components/0001'
+import Second from '@/pages/detail/components/0002'
+import Third from '@/pages/detail/components/0003'
+import Wode from '@/pages/wode/wode'
 
 Vue.use(Router)
 
@@ -17,9 +20,21 @@ export default new Router({
       name: 'city',
       component: City
     }, {
-      path: '/detail/:id',
-      name: 'detail',
-      component: Detail
+      path: '/detail/components/0001',
+      name: 'First',
+      component: First
+    }, {
+      path: '/detail/components/0002',
+      name: 'Second',
+      component: Second
+    }, {
+      path: '/detail/components/0003',
+      name: 'Third',
+      component: Third
+    }, {
+      path: '/wode/signed',
+      name: 'wode',
+      component: Wode
     }
   ],
   scrollBehavior (to, from, savedPosition) {

@@ -1,6 +1,6 @@
 <template>
 	<div>
-		<div class="weekend-title">周末去哪儿</div>
+		<div class="weekend-title">健康减压好去处</div>
 		<ul>
 			<li class="item border-bottom" v-for="item of list" :key="item.id">
         <div class="item-img-wrapper">
@@ -54,10 +54,15 @@ export default {
   .weekend-title
    line-height: .8rem
    text-indent: .2rem
+   font-size: .3rem
+   color: black
+   background: #d0d0d0
+   font-weight: bold
   .item-img-wrapper
    overflow: hidden
    height: 0
    padding-bottom: 37.1%
+   margin-top: .1rem
    .item-img
      width: 100%
   .item-info
